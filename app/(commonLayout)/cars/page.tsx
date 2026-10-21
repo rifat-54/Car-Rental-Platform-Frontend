@@ -7,7 +7,8 @@ export default async function CarPage() {
     const {data}=await res.json()
     console.log("Car data",data)
   return (
-    <div>CarPage
+    <div>
+        CarPage
         <ul>
            {
             data.map((car:any)=>(
