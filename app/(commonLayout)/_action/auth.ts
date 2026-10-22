@@ -31,15 +31,15 @@ try {
 
     cookieOptions.set("accessToken",accessToken,{
         httpOnly:true,
-        secure:true,
-        sameSite:"none",
+        secure:process.env.NODE_ENV==="production",
+        sameSite:"lax",
         path:"/",
     })
 
     cookieOptions.set("refreshToken",refreshToken,{
         httpOnly:true,
         secure:true,
-        sameSite:"none",
+        sameSite:"lax",
         path:"/",
     })
 
